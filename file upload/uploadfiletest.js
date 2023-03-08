@@ -7,7 +7,7 @@ http.createServer(function (req, res) {
         var form = new formidable.IncomingForm();
         form.parse(req, function (err, fields, files) {
             var oldpath = files.filetoupload.filepath;
-            var newpath = '/home/ron/Workspace/cardform/' + files.filetoupload.originalFilename;
+            var newpath = '/home/ron/Workspace/cardform/media/' + files.filetoupload.originalFilename;
             // I can't cut files across partitions (/ and /home)
             // so I have to copy it over and remove the old one
             fs.copyFile(oldpath, newpath, function (err) {
