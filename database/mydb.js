@@ -10,6 +10,10 @@ var connection = mysql.createConnection({
 
   connection.connect(function(err) {
     if (err) throw err;
-    // console.log("Connected!"); testing the connection
 });
 module.exports = connection;
+
+/* this is my first working example of a module
+it works by making the connection and setting the proper variable
+to connect to my db, you don't have to do the connection.connect 
+function because we're exporting that variable (funtion? who knows) */
