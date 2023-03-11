@@ -18,7 +18,6 @@ http.createServer(function (req, res) {
             // remove the old one 
             fs.unlink(oldpath, function(err){
                 if(err) throw err;
-
                 res.write('Temp file deleted!');
             });
        });
